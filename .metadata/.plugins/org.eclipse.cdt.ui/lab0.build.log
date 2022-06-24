@@ -1,0 +1,35 @@
+16:42:57 **** Incremental Build of configuration Debug for project lab0 ****
+make -j4 all 
+arm-none-eabi-gcc "../FreeRTOS/portable/MemMang/heap_4.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I"C:/Users/tcfsh/STM32CubeIDE/workspace_1.8.0/lab2/FreeRTOS/include" -I"C:/Users/tcfsh/STM32CubeIDE/workspace_1.8.0/lab2/FreeRTOS/portable/ARM_CM4F" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"FreeRTOS/portable/MemMang/heap_4.d" -MT"FreeRTOS/portable/MemMang/heap_4.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "FreeRTOS/portable/MemMang/heap_4.o"
+arm-none-eabi-gcc "../FreeRTOS/portable/ARM_CM4F/port.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I"C:/Users/tcfsh/STM32CubeIDE/workspace_1.8.0/lab2/FreeRTOS/include" -I"C:/Users/tcfsh/STM32CubeIDE/workspace_1.8.0/lab2/FreeRTOS/portable/ARM_CM4F" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"FreeRTOS/portable/ARM_CM4F/port.d" -MT"FreeRTOS/portable/ARM_CM4F/port.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "FreeRTOS/portable/ARM_CM4F/port.o"
+arm-none-eabi-gcc "../FreeRTOS/croutine.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I"C:/Users/tcfsh/STM32CubeIDE/workspace_1.8.0/lab2/FreeRTOS/include" -I"C:/Users/tcfsh/STM32CubeIDE/workspace_1.8.0/lab2/FreeRTOS/portable/ARM_CM4F" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"FreeRTOS/croutine.d" -MT"FreeRTOS/croutine.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "FreeRTOS/croutine.o"
+arm-none-eabi-gcc "../FreeRTOS/event_groups.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I"C:/Users/tcfsh/STM32CubeIDE/workspace_1.8.0/lab2/FreeRTOS/include" -I"C:/Users/tcfsh/STM32CubeIDE/workspace_1.8.0/lab2/FreeRTOS/portable/ARM_CM4F" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"FreeRTOS/event_groups.d" -MT"FreeRTOS/event_groups.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "FreeRTOS/event_groups.o"
+In file included from ../FreeRTOS/portable/MemMang/heap_4.c:44:
+C:/Users/tcfsh/STM32CubeIDE/workspace_1.8.0/lab2/FreeRTOS/include/task.h:2386:1: error: unknown type name 'UART_HandleTypeDef'; did you mean 'TIM_HandleTypeDef'?
+ 2386 | UART_HandleTypeDef huart2;
+      | ^~~~~~~~~~~~~~~~~~
+      | TIM_HandleTypeDef
+In file included from ../FreeRTOS/croutine.c:29:
+C:/Users/tcfsh/STM32CubeIDE/workspace_1.8.0/lab2/FreeRTOS/include/task.h:2386:1: error: unknown type name 'UART_HandleTypeDef'; did you mean 'TIM_HandleTypeDef'?
+ 2386 | UART_HandleTypeDef huart2;
+      | ^~~~~~~~~~~~~~~~~~
+      | TIM_HandleTypeDef
+In file included from ../FreeRTOS/event_groups.c:38:
+C:/Users/tcfsh/STM32CubeIDE/workspace_1.8.0/lab2/FreeRTOS/include/task.h:2386:1: error: unknown type name 'UART_HandleTypeDef'; did you mean 'TIM_HandleTypeDef'?
+ 2386 | UART_HandleTypeDef huart2;
+      | ^~~~~~~~~~~~~~~~~~
+      | TIM_HandleTypeDef
+In file included from ../FreeRTOS/portable/ARM_CM4F/port.c:34:
+C:/Users/tcfsh/STM32CubeIDE/workspace_1.8.0/lab2/FreeRTOS/include/task.h:2386:1: error: unknown type name 'UART_HandleTypeDef'; did you mean 'TIM_HandleTypeDef'?
+ 2386 | UART_HandleTypeDef huart2;
+      | ^~~~~~~~~~~~~~~~~~
+      | TIM_HandleTypeDef
+make: *** [FreeRTOS/portable/MemMang/subdir.mk:19: FreeRTOS/portable/MemMang/heap_4.o] Error 1
+make: *** Waiting for unfinished jobs....
+make: *** [FreeRTOS/subdir.mk:37: FreeRTOS/croutine.o] Error 1
+make: *** [FreeRTOS/subdir.mk:37: FreeRTOS/event_groups.o] Error 1
+make: *** [FreeRTOS/portable/ARM_CM4F/subdir.mk:19: FreeRTOS/portable/ARM_CM4F/port.o] Error 1
+"make -j4 all" terminated with exit code 2. Build might be incomplete.
+
+16:42:59 Build Failed. 9 errors, 0 warnings. (took 1s.869ms)
+
